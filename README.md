@@ -16,6 +16,3 @@ A simple and intuitive ToDo app built with the **MERN stack** (MongoDB, Express,
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB (via Mongoose)
 - **Other:** CORS, dotenv, body-parser
-
-## Project Structure
-
