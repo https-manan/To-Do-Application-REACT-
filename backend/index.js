@@ -5,11 +5,12 @@ const port = 8080;
 const Todo = require('./db.js');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const cors = require('cors')
 
 mongoose.connect(process.env.MONGO_URI);
 
 app.use(express.json());
-
+app.use(cors({origin: 'http://localhost:5173'}))
 app.post('/todo', async (req, res) => {
     const parsePayload = createTodo.safeParse(req.body);
     if (!parsePayload.success) {
